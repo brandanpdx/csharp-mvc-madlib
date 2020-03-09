@@ -5,11 +5,16 @@ namespace MadLibs.Controllers
 {
   public class HomeController : Controller
   {
+
     [Route("/")]
-    public ActionResult Form() { return View(); }
-    
-    [Route("/madlib")]
-    public ActionResult MadLib(string teacherName, string adjective, string programmingLanguage, string adjective2)
+    public ActionResult Selector() { return View(); }
+
+
+    [Route("/TeacherForm")]
+    public ActionResult TeacherForm() { return View(); }
+
+    [Route("/teachermadlib")]
+    public ActionResult TeacherMadLib(string teacherName, string adjective, string programmingLanguage, string adjective2)
     {
       MadLibVariable newMadlibVariable = new MadLibVariable();
       newMadlibVariable.TeacherName = teacherName;
